@@ -89,6 +89,8 @@ void *pnvmalloc(size_t size, struct rqst_struct *rqst) {
 
 #else
 
+	addr = (char *)malloc(size);
+
 #ifdef USE_STATS
 	
 	gettimeofday(&start, NULL);	
